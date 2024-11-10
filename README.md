@@ -73,4 +73,13 @@ The formula for calculating the monthly payment is:
 - **Result**: If Monthly Payment > 30% of Monthly Income, display "Loan denied" message
 - **If Eligible**: Display expense breakdown with total payment, total interest, and remaining income after expenses
 
----
+### Colours
+
+- **Primary**: Navy
+- **Secondary**: Dark Blue
+- **Accent**: Gold
+- **Text**: White / Black
+
+### Font
+
+- **Type**: Sans-Serif

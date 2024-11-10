@@ -67,6 +67,3 @@ function toggleTheme() {
 themeBtn.onclick = () => {
 	toggleTheme();
 };
-
-// Theme Swap on load
-toggleTheme;
