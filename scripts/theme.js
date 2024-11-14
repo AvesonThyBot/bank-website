@@ -31,7 +31,6 @@ function toggleTheme() {
 		// change logo to logo-black
 		document.body.querySelector(".navbar-brand").src = "../images/logo-black.png";
 	} else {
-		// Light mode setting
 		document.body.setAttribute("data-bs-theme", "dark");
 		// Theme swap to light mode
 		document.querySelectorAll(".bg-light").forEach((element) => {
