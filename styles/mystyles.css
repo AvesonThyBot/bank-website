@@ -26,4 +26,23 @@ body::-webkit-scrollbar-thumb {
 	max-height: 50dvh;
 	min-width: 100dvw;
 	object-fit: cover;
+	-webkit-user-drag: none;
+}
+
+[data-bs-theme="dark"].hero img {
+	filter: brightness(50%);
+}
+
+/* Footer Icons */
+.bi-twitter-x:hover {
+	fill: black;
+	transition: 0.3s ease-in-out;
+}
+.bi-instagram:hover {
+	fill: #fe5522;
+	transition: 0.3s ease-in-out;
+}
+.bi-facebook:hover {
+	fill: #0866ff;
+	transition: 0.3s ease-in-out;
 }
