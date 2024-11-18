@@ -27,6 +27,7 @@ body::-webkit-scrollbar-thumb {
 	min-width: 100dvw;
 	object-fit: cover;
 	-webkit-user-drag: none;
+	filter: brightness(0.9);
 }
 
 [data-bs-theme="dark"].hero img {
