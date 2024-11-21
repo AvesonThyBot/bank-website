@@ -23,7 +23,61 @@ $(".home-card").hover(
 	}
 );
 
-// services-card
-$(".services-card > .card ").on("click", function () {
-	$(this).animate({ left: "250px" });
+// ---------- Service Card Animations ----------
+
+// Opening Animation
+$(".services-card > .card .btn-read").on("click", function () {
+	let card = this.parentElement.parentElement;
+	let serviceCards = card.parentElement;
+	let delay = 500;
+
+	// Slide cards up and hide the rest
+	$(serviceCards).slideUp(300).delay(delay).slideDown(300);
+	setTimeout(function () {
+		$(serviceCards).find(".card").not(card).addClass("d-none");
+	}, delay);
+
+	// Make the card bigger & show new text and button
+	setTimeout(function () {
+		$(card).css("transition", "0.3s ease-in-out");
+
+		// Make the card bigger
+		$(serviceCards).find(".card").not(card).addClass("d-none");
+		$(card).addClass("w-100");
+
+		// Show hidden card-text
+		$(card).find(".card-text").first().addClass("d-none");
+		$(card).find(".card-text").last().removeClass("d-none");
+
+		// Swap Button
+		$(card).find(".btn").first().addClass("d-none");
+		$(card).find(".btn").last().removeClass("d-none");
+	}, delay);
+});
+
+// Closing Animation
+$(".services-card > .card .btn-return").on("click", function () {
+	let card = this.parentElement.parentElement;
+	let serviceCards = card.parentElement;
+	let delay = 500;
+
+	// Slide cards up and shows the rest
+	$(serviceCards).slideUp(300).delay(delay).slideDown(300);
+	setTimeout(function () {
+		$(serviceCards).find(".card").not(card).removeClass("d-none");
+	}, delay);
+
+	// Make the card smaller & return older text and button
+	setTimeout(function () {
+		$(serviceCards).find(".card").not(card).removeClass("d-none");
+		$(card).removeClass("w-100");
+
+		// Show hidden card-text
+		$(card).find(".card-text").first().removeClass("d-none");
+		$(card).find(".card-text").last().addClass("d-none");
+
+		// Swap Button
+		$(card).find(".btn").first().removeClass("d-none");
+		$(card).find(".btn").last().addClass("d-none");
+	}, delay);
 });
