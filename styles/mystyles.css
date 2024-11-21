@@ -1,33 +1,135 @@
-/* Font */
+/* Overall */
 * {
 	font-family: sans-serif;
 }
 
+/* Dark Theme */
+[data-bs-theme="dark"] {
+	--bs-body-bg: #030a11 !important;
+	--text-color: #e5f0fa;
+	--primary-color: #001f3d; /* Navy */
+	--secondary-color: #003366; /* Dark Blue */
+	--accent-color: #ffcc00; /* Gold */
+
+	background-color: var(--bs-body-bg) !important;
+	color: var(--text-color) !important;
+
+	.bg-light,
+	.text-bg-light,
+	.btn-light,
+	.btn-outline-light:hover {
+		background-color: var(--accent-color) !important;
+		border-color: var(--accent-color) !important;
+	}
+
+	.btn-outline-light {
+		border-color: var(--accent-color) !important;
+	}
+
+	.navbar {
+		background-color: #c9aa2e !important; /* Slightly darkened gold */
+	}
+
+	.card-text,
+	.fs-5 {
+		color: #fdf2f4 !important;
+	}
+
+	.list-group-item a {
+		color: var(--accent-color) !important;
+	}
+
+	.list-group-item a:hover {
+		color: #d81835 !important;
+	}
+
+	::selection {
+		background: #d81835 !important;
+	}
+}
+
+/* Light Theme */
+[data-bs-theme="light"] {
+	--bs-body-bg: #f4f4f4 !important;
+	--text-color: #121212;
+	--primary-color: #001f3d; /* Navy */
+	--secondary-color: #003366; /* Dark Blue */
+	--accent-color: #ffcc00; /* Gold */
+
+	background-color: var(--bs-body-bg) !important;
+	color: var(--text-color) !important;
+
+	.bg-dark,
+	.text-bg-dark,
+	.btn-dark,
+	.btn-outline-dark:hover {
+		background-color: #b39b14 !important; /* Lightened gold for buttons */
+		border-color: #b39b14 !important;
+	}
+
+	.btn-outline-dark {
+		border-color: #b39b14 !important;
+	}
+
+	.navbar {
+		background-color: #f1c783 !important; /* Lighter gold background for navbar */
+	}
+
+	.card-text,
+	.fs-5 {
+		color: #0d0204 !important;
+	}
+
+	.list-group-item a {
+		color: #b39b14 !important; /* Lightened gold for links */
+	}
+
+	.list-group-item a:hover {
+		color: #e72744 !important;
+	}
+
+	::selection {
+		background: #e72744 !important;
+	}
+}
+
+/* Highlight */
+::-moz-selection {
+	background: var(--bs-accent);
+}
+::selection {
+	background: var(--bs-accent);
+}
+
 /* Scrollbar */
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
 	width: 0.4em;
 }
 
-body::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
 	border-radius: 5px;
 	background-color: var(--bs-accent);
 }
 
 [data-bs-theme="dark"] {
-	--bs-accent: var(--bs-light);
+	--bs-accent: var(--bs-orange);
 }
 
 [data-bs-theme="light"] {
-	--bs-accent: var(--bs-dark);
+	--bs-accent: var(--bs-info);
 }
 
 /* Hero Image */
+.hero {
+	max-width: 100dvw !important;
+	overflow-x: hidden;
+}
 .hero img {
 	max-height: 50dvh;
 	min-width: 100dvw;
 	object-fit: cover;
 	-webkit-user-drag: none;
-	filter: brightness(0.9);
+	filter: brightness(0.8);
 }
 
 [data-bs-theme="dark"].hero img {
@@ -37,13 +139,25 @@ body::-webkit-scrollbar-thumb {
 /* Footer Icons */
 .bi-twitter-x:hover {
 	fill: black;
-	transition: 0.3s ease-in-out;
+	transition: 0.2s ease-in-out;
 }
 .bi-instagram:hover {
 	fill: #fe5522;
-	transition: 0.3s ease-in-out;
+	transition: 0.2s ease-in-out;
 }
-.bi-facebook:hover {
+
+.bi-facebook:hover,
+.bi-linkedin:hover {
 	fill: #0866ff;
-	transition: 0.3s ease-in-out;
+	transition: 0.2s ease-in-out;
+}
+
+.bi-snapchat:hover {
+	fill: yellow;
+	transition: 0.2s ease-in-out;
+}
+
+.scrollspy-example {
+	overflow-y: scroll;
+	max-height: 60dvh;
 }

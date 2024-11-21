@@ -1,68 +1,57 @@
 // Variables
-const themeBtn = document.querySelector("#themeBtn");
+const themeBtn = $("#themeBtn");
 let darkMode = true;
 
 // Function to toggle theme
 function toggleTheme() {
+	// Light mode settings
 	if (darkMode) {
-		// Dark Mode setting
-		document.body.setAttribute("data-bs-theme", "light");
-		// Theme swap to dark mode
-		document.querySelectorAll(".bg-dark").forEach((element) => {
-			element.classList.replace("bg-dark", "bg-light");
-		});
-		document.querySelectorAll(".text-bg-light").forEach((element) => {
-			element.classList.replace("text-bg-light", "text-bg-dark");
-		});
-		document.querySelectorAll(".text-light").forEach((element) => {
-			element.classList.replace("text-light", "text-dark");
-		});
-		document.querySelectorAll(".border-light").forEach((element) => {
-			element.classList.replace("border-light", "border-dark");
-		});
-		// Change Button
-		document.body.querySelectorAll(".btn-light").forEach((element) => {
-			element.classList.replace("btn-light", "btn-dark");
-			if (element.childElementCount == 1 && element.firstElementChild.tagName === "svg") {
-				element.firstElementChild.setAttribute("fill", "white");
-			}
+		$("body").attr("data-bs-theme", "light");
+
+		// Main classes change
+		$(".bg-dark").removeClass("bg-dark").addClass("bg-light");
+		$(".text-bg-light").removeClass("text-bg-light").addClass("text-bg-dark");
+		$(".text-light").removeClass("text-light").addClass("text-dark");
+		$(".border-light").removeClass("border-light").addClass("border-dark");
+		$(".bg-body-tertiary").removeClass("bg-body-tertiary").addClass("bg-body-secondary");
+		$(".btn-outline-dark").removeClass("btn-outline-dark").addClass("btn-outline-light");
+		$(".btn-outline-secondary").removeClass("btn-outline-secondary").addClass("btn-secondary");
+
+		// Change button fill
+		$(".btn-light").each(function () {
+			$(this).removeClass("btn-light").addClass("btn-dark");
+			$(this).children("svg").attr("fill", "white");
 		});
 
-		// change logo to logo-black
-		document.body.querySelector(".navbar-brand").src = "../images/logo-black.png";
-	} else {
-		document.body.setAttribute("data-bs-theme", "dark");
-		// Theme swap to light mode
-		document.querySelectorAll(".bg-light").forEach((element) => {
-			element.classList.replace("bg-light", "bg-dark");
-		});
-		document.querySelectorAll(".text-bg-dark").forEach((element) => {
-			element.classList.replace("text-bg-dark", "text-bg-light");
-		});
-		document.querySelectorAll(".text-dark").forEach((element) => {
-			element.classList.replace("text-dark", "text-light");
-		});
-		document.querySelectorAll(".border-dark").forEach((element) => {
-			element.classList.replace("border-dark", "border-light");
+		// Change logo
+		$(".navbar-brand").attr("src", "../images/logo-black.png");
+	}
+	// Dark mode Settings
+	else {
+		$("body").attr("data-bs-theme", "dark");
+
+		// Main classes change
+		$(".bg-light").removeClass("bg-light").addClass("bg-dark");
+		$(".text-bg-dark").removeClass("text-bg-dark").addClass("text-bg-light");
+		$(".text-dark").removeClass("text-dark").addClass("text-light");
+		$(".border-dark").removeClass("border-dark").addClass("border-light");
+		$(".bg-body-secondary").removeClass("bg-body-secondary").addClass("bg-body-tertiary");
+		$(".btn-outline-light").removeClass("btn-outline-light").addClass("btn-outline-dark");
+		$(".btn-secondary").removeClass("btn-secondary").addClass("btn-outline-secondary");
+
+		// Change button fill
+		$(".btn-dark").each(function () {
+			$(this).removeClass("btn-dark").addClass("btn-light");
+			$(this).children("svg").attr("fill", "black");
 		});
 
-		// Change Button
-		document.body.querySelectorAll(".btn-dark").forEach((element) => {
-			element.classList.replace("btn-dark", "btn-light");
-			if (element.childElementCount == 1 && element.firstElementChild.tagName === "svg") {
-				element.firstElementChild.setAttribute("fill", "black");
-			}
-		});
-
-		// change logo to logo-white
-		document.body.querySelector(".navbar-brand").src = "../images/logo-white.png";
+		// Change logo
+		$(".navbar-brand").attr("src", "../images/logo-white.png");
 	}
 
-	// Change type
+	// Swap darkMode boolean
 	darkMode = !darkMode;
 }
 
-// Theme Swap
-themeBtn.onclick = () => {
-	toggleTheme();
-};
+// Onclick handler
+themeBtn.on("click", toggleTheme);

@@ -6,8 +6,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<link rel="shortcut icon" href="../images/logo-white.png" type="image/x-icon" />
-		<link rel="stylesheet" href="../styles/mystyles.css" />
 		<link rel="stylesheet" href="../bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" href="../styles/mystyles.css" />
 		<script src="../scripts/jquery-3.7.1.min.js"></script>
 	</head>
 
@@ -66,46 +66,246 @@
 			</nav>
 		</header>
 
-		<main>
-			<div class="container my-auto mt-5">
-				<div class="accordion" id="accordionExample">
-					<div class="accordion-item">
-						<h2 class="accordion-header">
-							<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Accordion Item #1</button>
-						</h2>
-						<div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-							<div class="accordion-body">
-								<strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
-								overflow.
-							</div>
-						</div>
+		<main class="container-fluid my-auto mt-3 mb-5">
+			<h1 class="text-center fw-bold border-bottom border-5 border-light rounded">Home</h1>
+
+			<!-- Scrollspy -->
+			<div class="row mt-3">
+				<div class="col-4">
+					<!-- Items -->
+					<div id="faq-scrollspy" class="list-group">
+						<a class="list-group-item list-group-item-action" href="#faq-list-1">General Information</a>
+						<a class="list-group-item list-group-item-action" href="#faq-list-2">Service</a>
+						<a class="list-group-item list-group-item-action" href="#faq-list-3">Account</a>
+						<a class="list-group-item list-group-item-action" href="#faq-list-4">Payment/Billing</a>
+						<a class="list-group-item list-group-item-action" href="#faq-list-5">Mortgage</a>
+						<a class="list-group-item list-group-item-action" href="#faq-list-6">Privacy & Security</a>
+						<a class="list-group-item list-group-item-action" href="#faq-list-7">Technical Support</a>
 					</div>
-					<div class="accordion-item">
-						<h2 class="accordion-header">
-							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Accordion Item #2</button>
-						</h2>
-						<div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-							<div class="accordion-body">
-								<strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
-								overflow.
+				</div>
+				<!-- Accordions -->
+				<div class="col-8">
+					<div data-bs-spy="scroll" data-bs-target="#faq-scrollspy" data-bs-offset="0" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+						<!-- Accordion: General Information -->
+						<div class="container my-auto mb-3">
+							<h4 id="faq-list-1">General Information</h4>
+							<div class="accordion" id="#FAQ-General">
+								<div class="accordion-item">
+									<h2 class="accordion-header">
+										<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#GeneralCollapseOne" aria-expanded="true" aria-controls="collapseOne">FAQ Question #1</button>
+									</h2>
+									<div id="GeneralCollapseOne" class="accordion-collapse collapse show" data-bs-parent="#FAQ-General">
+										<div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, repellat quaerat animi dignissimos iste, qui eveniet harum, at consequatur libero quasi eos dolore soluta vero officia error distinctio doloribus accusantium.</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#GeneralCollapseTwo" aria-expanded="false" aria-controls="collapseTwo">FAQ Question #2</button>
+									</h2>
+									<div id="GeneralCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#FAQ-General">
+										<div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga harum officia a in, molestiae voluptatem, explicabo dicta exercitationem sunt deserunt quidem reprehenderit, magnam tenetur culpa minus fugit eos voluptatibus doloremque.</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#GeneralCollapseThree" aria-expanded="false" aria-controls="collapseThree">FAQ Question #3</button>
+									</h2>
+									<div id="GeneralCollapseThree" class="accordion-collapse collapse" data-bs-parent="#FAQ-General">
+										<div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae quidem veniam perspiciatis, quos at repellendus sunt tempora itaque ducimus ipsa, nesciunt non aspernatur natus mollitia voluptate libero soluta deserunt dolores.</div>
+									</div>
+								</div>
 							</div>
+							<p class="fs-5 fw-bold">Extra info: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit accusamus dicta consequuntur ullam blanditiis nisi quod? Porro odit, pariatur ullam animi eius excepturi consequuntur quis delectus ex. Odit, eius assumenda.</p>
 						</div>
-					</div>
-					<div class="accordion-item">
-						<h2 class="accordion-header">
-							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Accordion Item #3</button>
-						</h2>
-						<div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-							<div class="accordion-body">
-								<strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
-								overflow.
+						<!-- Accordion: Service -->
+						<div class="container my-auto mb-3">
+							<h4 id="faq-list-2">Service</h4>
+							<div class="accordion" id="#FAQ-Service">
+								<div class="accordion-item">
+									<h2 class="accordion-header">
+										<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ServiceCollapseOne" aria-expanded="true" aria-controls="collapseOne">FAQ Question #1</button>
+									</h2>
+									<div id="ServiceCollapseOne" class="accordion-collapse collapse show" data-bs-parent="#FAQ-Service">
+										<div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, repellat quaerat animi dignissimos iste, qui eveniet harum, at consequatur libero quasi eos dolore soluta vero officia error distinctio doloribus accusantium.</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ServiceCollapseTwo" aria-expanded="false" aria-controls="collapseTwo">FAQ Question #2</button>
+									</h2>
+									<div id="ServiceCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#FAQ-Service">
+										<div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga harum officia a in, molestiae voluptatem, explicabo dicta exercitationem sunt deserunt quidem reprehenderit, magnam tenetur culpa minus fugit eos voluptatibus doloremque.</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ServiceCollapseThree" aria-expanded="false" aria-controls="collapseThree">FAQ Question #3</button>
+									</h2>
+									<div id="ServiceCollapseThree" class="accordion-collapse collapse" data-bs-parent="#FAQ-Service">
+										<div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae quidem veniam perspiciatis, quos at repellendus sunt tempora itaque ducimus ipsa, nesciunt non aspernatur natus mollitia voluptate libero soluta deserunt dolores.</div>
+									</div>
+								</div>
+							</div>
+							<p class="fs-5 fw-bold">Extra info: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit accusamus dicta consequuntur ullam blanditiis nisi quod? Porro odit, pariatur ullam animi eius excepturi consequuntur quis delectus ex. Odit, eius assumenda.</p>
+						</div>
+						<!-- Accordion: Accounts -->
+						<div class="container my-auto mb-3">
+							<h4 id="faq-list-3">Accounts</h4>
+							<div class="accordion" id="#FAQ-Account">
+								<div class="accordion-item">
+									<h2 class="accordion-header">
+										<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#AccountCollapseOne" aria-expanded="true" aria-controls="collapseOne">FAQ Question #1</button>
+									</h2>
+									<div id="AccountCollapseOne" class="accordion-collapse collapse show" data-bs-parent="#FAQ-Account">
+										<div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, repellat quaerat animi dignissimos iste, qui eveniet harum, at consequatur libero quasi eos dolore soluta vero officia error distinctio doloribus accusantium.</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#AccountCollapseTwo" aria-expanded="false" aria-controls="collapseTwo">FAQ Question #2</button>
+									</h2>
+									<div id="AccountCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#FAQ-Account">
+										<div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga harum officia a in, molestiae voluptatem, explicabo dicta exercitationem sunt deserunt quidem reprehenderit, magnam tenetur culpa minus fugit eos voluptatibus doloremque.</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#AccountCollapseThree" aria-expanded="false" aria-controls="collapseThree">FAQ Question #3</button>
+									</h2>
+									<div id="AccountCollapseThree" class="accordion-collapse collapse" data-bs-parent="#FAQ-Account">
+										<div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae quidem veniam perspiciatis, quos at repellendus sunt tempora itaque ducimus ipsa, nesciunt non aspernatur natus mollitia voluptate libero soluta deserunt dolores.</div>
+									</div>
+								</div>
+							</div>
+							<p class="fs-5 fw-bold">Extra info: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit accusamus dicta consequuntur ullam blanditiis nisi quod? Porro odit, pariatur ullam animi eius excepturi consequuntur quis delectus ex. Odit, eius assumenda.</p>
+						</div>
+						<!-- Accordion: Payment/Billing -->
+						<div class="container my-auto mb-3">
+							<h4 id="faq-list-4">Payment/Billing</h4>
+							<div class="accordion" id="#FAQ-Payment">
+								<div class="accordion-item">
+									<h2 class="accordion-header">
+										<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#PaymentCollapseOne" aria-expanded="true" aria-controls="collapseOne">FAQ Question #1</button>
+									</h2>
+									<div id="PaymentCollapseOne" class="accordion-collapse collapse show" data-bs-parent="#FAQ-Payment">
+										<div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, repellat quaerat animi dignissimos iste, qui eveniet harum, at consequatur libero quasi eos dolore soluta vero officia error distinctio doloribus accusantium.</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#PaymentCollapseTwo" aria-expanded="false" aria-controls="collapseTwo">FAQ Question #2</button>
+									</h2>
+									<div id="PaymentCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#FAQ-Payment">
+										<div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga harum officia a in, molestiae voluptatem, explicabo dicta exercitationem sunt deserunt quidem reprehenderit, magnam tenetur culpa minus fugit eos voluptatibus doloremque.</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#PaymentCollapseThree" aria-expanded="false" aria-controls="collapseThree">FAQ Question #3</button>
+									</h2>
+									<div id="PaymentCollapseThree" class="accordion-collapse collapse" data-bs-parent="#FAQ-Payment">
+										<div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae quidem veniam perspiciatis, quos at repellendus sunt tempora itaque ducimus ipsa, nesciunt non aspernatur natus mollitia voluptate libero soluta deserunt dolores.</div>
+									</div>
+								</div>
+							</div>
+							<p class="fs-5 fw-bold">Extra info: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit accusamus dicta consequuntur ullam blanditiis nisi quod? Porro odit, pariatur ullam animi eius excepturi consequuntur quis delectus ex. Odit, eius assumenda.</p>
+						</div>
+						<!-- Accordion: Mortgage -->
+						<div class="container my-auto mb-3">
+							<h4 id="faq-list-5">Mortgage</h4>
+							<div class="accordion" id="#FAQ-Mortgage">
+								<div class="accordion-item">
+									<h2 class="accordion-header">
+										<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#MortgageCollapseOne" aria-expanded="true" aria-controls="collapseOne">FAQ Question #1</button>
+									</h2>
+									<div id="MortgageCollapseOne" class="accordion-collapse collapse show" data-bs-parent="#FAQ-Mortgage">
+										<div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, repellat quaerat animi dignissimos iste, qui eveniet harum, at consequatur libero quasi eos dolore soluta vero officia error distinctio doloribus accusantium.</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#MortgageCollapseTwo" aria-expanded="false" aria-controls="collapseTwo">FAQ Question #2</button>
+									</h2>
+									<div id="MortgageCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#FAQ-Mortgage">
+										<div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga harum officia a in, molestiae voluptatem, explicabo dicta exercitationem sunt deserunt quidem reprehenderit, magnam tenetur culpa minus fugit eos voluptatibus doloremque.</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#MortgageCollapseThree" aria-expanded="false" aria-controls="collapseThree">FAQ Question #3</button>
+									</h2>
+									<div id="MortgageCollapseThree" class="accordion-collapse collapse" data-bs-parent="#FAQ-Mortgage">
+										<div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae quidem veniam perspiciatis, quos at repellendus sunt tempora itaque ducimus ipsa, nesciunt non aspernatur natus mollitia voluptate libero soluta deserunt dolores.</div>
+									</div>
+								</div>
+							</div>
+							<p class="fs-5 fw-bold">Extra info: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit accusamus dicta consequuntur ullam blanditiis nisi quod? Porro odit, pariatur ullam animi eius excepturi consequuntur quis delectus ex. Odit, eius assumenda.</p>
+						</div>
+						<!-- Accordion: Privacy & Security -->
+						<div class="container my-auto mb-3">
+							<h4 id="faq-list-6">Privacy & Security</h4>
+							<div class="accordion" id="#FAQ-Privacy">
+								<div class="accordion-item">
+									<h2 class="accordion-header">
+										<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#PrivacyCollapseOne" aria-expanded="true" aria-controls="collapseOne">FAQ Question #1</button>
+									</h2>
+									<div id="PrivacyCollapseOne" class="accordion-collapse collapse show" data-bs-parent="#FAQ-Privacy">
+										<div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, repellat quaerat animi dignissimos iste, qui eveniet harum, at consequatur libero quasi eos dolore soluta vero officia error distinctio doloribus accusantium.</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#PrivacyCollapseTwo" aria-expanded="false" aria-controls="collapseTwo">FAQ Question #2</button>
+									</h2>
+									<div id="PrivacyCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#FAQ-Privacy">
+										<div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga harum officia a in, molestiae voluptatem, explicabo dicta exercitationem sunt deserunt quidem reprehenderit, magnam tenetur culpa minus fugit eos voluptatibus doloremque.</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#PrivacyCollapseThree" aria-expanded="false" aria-controls="collapseThree">FAQ Question #3</button>
+									</h2>
+									<div id="PrivacyCollapseThree" class="accordion-collapse collapse" data-bs-parent="#FAQ-Privacy">
+										<div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae quidem veniam perspiciatis, quos at repellendus sunt tempora itaque ducimus ipsa, nesciunt non aspernatur natus mollitia voluptate libero soluta deserunt dolores.</div>
+									</div>
+								</div>
+							</div>
+							<p class="fs-5 fw-bold">Extra info: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit accusamus dicta consequuntur ullam blanditiis nisi quod? Porro odit, pariatur ullam animi eius excepturi consequuntur quis delectus ex. Odit, eius assumenda.</p>
+						</div>
+						<!-- Accordion: Technical Support -->
+						<div class="container my-auto mb-3">
+							<h4 id="faq-list-7">Technical Support</h4>
+							<div class="accordion" id="#FAQ-Technical">
+								<div class="accordion-item">
+									<h2 class="accordion-header">
+										<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#TechnicalCollapseOne" aria-expanded="true" aria-controls="collapseOne">FAQ Question #1</button>
+									</h2>
+									<div id="TechnicalCollapseOne" class="accordion-collapse collapse show" data-bs-parent="#FAQ-Technical">
+										<div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, repellat quaerat animi dignissimos iste, qui eveniet harum, at consequatur libero quasi eos dolore soluta vero officia error distinctio doloribus accusantium.</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#TechnicalCollapseTwo" aria-expanded="false" aria-controls="collapseTwo">FAQ Question #2</button>
+									</h2>
+									<div id="TechnicalCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#FAQ-Technical">
+										<div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga harum officia a in, molestiae voluptatem, explicabo dicta exercitationem sunt deserunt quidem reprehenderit, magnam tenetur culpa minus fugit eos voluptatibus doloremque.</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#TechnicalCollapseThree" aria-expanded="false" aria-controls="collapseThree">FAQ Question #3</button>
+									</h2>
+									<div id="TechnicalCollapseThree" class="accordion-collapse collapse" data-bs-parent="#FAQ-Technical">
+										<div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae quidem veniam perspiciatis, quos at repellendus sunt tempora itaque ducimus ipsa, nesciunt non aspernatur natus mollitia voluptate libero soluta deserunt dolores.</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</main>
-
 		<!-- Bootstrap JavaScript Libraries -->
 		<script src="../bootstrap/bootstrap.bundle.min.js"></script>
 		<script src="../scripts/theme.js"></script>
