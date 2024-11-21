@@ -70,42 +70,51 @@
 		<main class="container">
 			<h1 class="text-center fw-bold border-bottom border-5 border-light rounded">Contact Us</h1>
 			<!-- Form -->
-			<form class="row needs-validation d-flex justify-content-center border border-light rounded-3 my-3 py-4 mx-auto" method="POST" novalidate>
+			<form class="row needs-validation d-flex justify-content-center border border-light rounded-3 my-3 py-4 mx-auto" method="POST" novalidate id="contactForm">
 				<h1 class="text-center fw-bold fs-3">Contact Form</h1>
+
 				<!-- Name -->
 				<div class="form-floating mb-3 has-validation">
-					<input type="text" name="name" class="form-control" id="floatingInput" placeholder="Aveson" />
-					<label for="floatingInput">Name</label>
+					<input type="text" name="name" class="form-control" id="floatingInputName" placeholder="Aveson" />
+					<label for="floatingInputName">Name</label>
 					<div class="invalid-feedback">Name is invalid.</div>
 					<div class="valid-feedback">Name is valid.</div>
 				</div>
 
 				<!-- Email -->
 				<div class="form-floating mb-3 has-validation">
-					<input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com" required />
-					<label for="floatingInput">Email<span class="text-danger fw-bold fs-5">*</span></label>
+					<input type="email" name="email" class="form-control" id="floatingInputEmail" placeholder="name@example.com" />
+					<label for="floatingInputEmail">Email<span class="text-danger fw-bold fs-5">*</span></label>
 					<div class="invalid-feedback">Email is invalid.</div>
 					<div class="valid-feedback">Email is valid.</div>
 				</div>
 
 				<!-- Subject -->
 				<div class="form-floating mb-3 has-validation">
-					<input type="text" name="subject" class="form-control" id="floatingInput" placeholder="Questions" required />
-					<label for="floatingInput">Subject<span class="text-danger fw-bold fs-5">*</span></label>
+					<input type="text" name="subject" class="form-control" id="floatingInputSubject" placeholder="Questions" />
+					<label for="floatingInputSubject">Subject<span class="text-danger fw-bold fs-5">*</span></label>
 					<div class="invalid-feedback">Subject is invalid.</div>
 					<div class="valid-feedback">Subject is valid.</div>
 				</div>
 
 				<!-- Message -->
 				<div class="form-floating mb-3 has-validation">
-					<textarea class="form-control" name="message" placeholder="Leave a comment here" style="height: 100px" id="floatTextArea" required></textarea>
+					<textarea class="form-control" name="message" placeholder="Leave a comment here" style="height: 100px" id="floatTextArea"></textarea>
 					<label for="floatTextArea">Message<span class="text-danger fw-bold fs-5">*</span></label>
 					<div class="invalid-feedback">Message is invalid.</div>
 					<div class="valid-feedback">Message is valid.</div>
 				</div>
 
+				<!-- Alert for success -->
+				<div>
+					<div class="alert alert-success alert-dismissible fade show fw-bold text-center fs-4 d-none" role="alert">
+						Form Submitted!
+						<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+					</div>
+				</div>
+
 				<!-- Submit Button -->
-				<button name="contactSubmit" type="button" class="btn btn-light col-6 fw-bold">Submit</button>
+				<button type="submit" class="btn btn-light col-6 fw-bold">Submit</button>
 			</form>
 
 			<!-- Other socials -->
@@ -170,5 +179,6 @@
 		<script src="../bootstrap/bootstrap.bundle.min.js"></script>
 		<script src="../scripts/theme.js"></script>
 		<script src="../scripts/animations.js"></script>
+		<script src="../scripts/validation.js"></script>
 	</body>
 </html>
