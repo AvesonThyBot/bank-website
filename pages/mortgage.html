@@ -67,11 +67,87 @@
 			</nav>
 		</header>
 
-		<main></main>
+		<main class="container">
+			<h1 class="text-center fw-bold border-bottom border-5 border-light rounded">Mortgage Calculator</h1>
+
+			<!-- Information -->
+			<div class="text-start">
+				<h2 class="fw-bold fs-3">Requirements</h2>
+				<p class="fs-4">some requirements.. <a href="#" class="link-info" target="_blank">Read more</a></p>
+			</div>
+
+			<!-- Calculator form -->
+			<form class="row needs-validation justify-content-center border border-light rounded-3 my-3 py-4 mx-auto" method="POST" novalidate id="calculatorForm">
+				<h1 class="text-center fw-bold fs-3">Loan Calculator</h1>
+
+				<!-- Loan Amount -->
+				<span class="fs-5 ms-2">Loan Amount<span class="text-danger">*</span></span>
+				<div class="input-group mb-3 has-validation">
+					<span class="input-group-text" id="loanAmount">£</span>
+					<input type="text" name="amount" class="form-control rounded-end-2" placeholder="20000" aria-label="Loan Amount" aria-describedby="loanAmount" />
+					<div class="invalid-feedback">Loan Amount is invalid.</div>
+					<div class="valid-feedback">Loan Amount is valid.</div>
+				</div>
+
+				<!-- Monthly Income -->
+				<span class="fs-5 ms-2">Monthly Income<span class="text-danger">*</span></span>
+				<div class="input-group mb-3 has-validation">
+					<span class="input-group-text" id="monthlyIncome">£</span>
+					<input type="text" name="income" class="form-control rounded-end-2" placeholder="1200" aria-label="Monthly Income" aria-describedby="monthlyIncome" />
+					<div class="invalid-feedback">Monthly Income is invalid.</div>
+					<div class="valid-feedback">Monthly Income is valid.</div>
+				</div>
+
+				<!-- Loan Terms -->
+				<span class="fs-5 ms-2">Loan Terms (Years)<span class="text-danger">*</span></span>
+				<div class="input-group mb-3 has-validation">
+					<input type="text" name="terms" class="form-control rounded-end-2" placeholder="3" aria-label="Loan Terms" aria-describedby="loanTerms" />
+					<div class="invalid-feedback">Loan Terms is invalid.</div>
+					<div class="valid-feedback">Loan Terms is valid.</div>
+				</div>
+
+				<!-- Submit Button -->
+				<button type="submit" class="btn btn-light col-6 fw-bold">Calculate</button>
+			</form>
+
+			<!-- Results -->
+			<div class="border border-light rounded-3 my-3 py-4 mx-auto text-center d-none" id="calculatorResult">
+				<h1 class="fw-bold fs-3 text-decoration-underline">Results</h1>
+
+				<div class="row">
+					<!-- Information -->
+					<div class="col-md-6 text-start">
+						<div class="fs-5 ms-2 fw-bold text-decoration-underline">Calculator Inputs</div>
+						<div class="fs-5 ms-2" id="resultAmount">Loan Amount:</div>
+						<div class="fs-5 ms-2" id="resultIncome">Monthly Income:</div>
+						<div class="fs-5 ms-2" id="resultTerms">Terms:</div>
+					</div>
+					<!-- Output -->
+					<div class="col-md-6 text-end">
+						<div class="fs-5 me-2 fw-bold text-decoration-underline">Calculator Outputs</div>
+						<div class="fs-5 me-2" id="resultPayment">Total Payment: 1</div>
+						<div class="fs-5 me-2" id="resultInterest">Total Interest: 1</div>
+						<div class="fs-5 me-2" id="resultPostIncome">Post-Expense Income: 1</div>
+					</div>
+					<!-- Eligible Message -->
+					<div class="col-8 mx-auto">
+						<div class="alert alert-dismissible fade show fw-bold text-center fs-4 d-none mt-3" role="alert">
+							Loan denied
+							<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+						</div>
+					</div>
+				</div>
+
+				<button type="submit" class="btn btn-danger col-6 fw-bold" id="resultReturn">Return</button>
+			</div>
+
+			<!-- Check eligibility, calculate monthly payment, display expensive breakdown  -->
+		</main>
 
 		<!-- Bootstrap JavaScript Libraries -->
 		<script src="../bootstrap/bootstrap.bundle.min.js"></script>
 		<script src="../scripts/theme.js"></script>
 		<script src="../scripts/animations.js"></script>
+		<script src="../scripts/validation.js"></script>
 	</body>
 </html>

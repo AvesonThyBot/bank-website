@@ -23,9 +23,50 @@ $(".home-card").hover(
 	}
 );
 
-// ---------- Service Card Animations ----------
+// ----------  Calculator Animations ----------
+// Opening animation
+$("#calculatorForm").on("submit", function (event) {
+	if (!$(this).valid()) return false; // End animation if not valid
 
-// Opening Animation
+	let result = $("#calculatorResult");
+	let delay = 800;
+
+	// Slide form up and show result
+	$(this).removeClass("border").delay(100).slideUp(300);
+	setTimeout(function () {
+		$(this).css("display", "none");
+		$(result).removeClass("d-none");
+		$(this).slideDown(300);
+		$(this).addClass("border");
+		$(result).removeClass("border");
+	}, delay);
+
+	setTimeout(function () {
+		$(result).addClass("border");
+	}, delay * 1.5);
+});
+
+// Closing animation
+$("#resultReturn").on("click", function (event) {
+	let form = $("#calculatorForm");
+	let result = $("#calculatorResult");
+	let delay = 800;
+
+	// Slide form up and show form
+	$(result).removeClass("border").delay(100).slideUp(300);
+	setTimeout(function () {
+		$(result).addClass("d-none");
+		$(form).css("display", "flex");
+		$(result).slideDown(300);
+	}, delay);
+
+	setTimeout(function () {
+		$(form).addClass("border");
+	}, delay * 1.3);
+});
+
+// ---------- Service Card Animations ----------
+// Opening animation
 $(".services-card > .card .btn-read").on("click", function () {
 	let card = this.parentElement.parentElement;
 	let serviceCards = card.parentElement;
@@ -55,7 +96,7 @@ $(".services-card > .card .btn-read").on("click", function () {
 	}, delay);
 });
 
-// Closing Animation
+// Closing animation
 $(".services-card > .card .btn-return").on("click", function () {
 	let card = this.parentElement.parentElement;
 	let serviceCards = card.parentElement;
