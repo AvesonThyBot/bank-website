@@ -1,18 +1,40 @@
+/* ---------- General changes ---------- */
 /* Overall */
 * {
 	font-family: sans-serif;
 }
 
+/* Highlight */
+::-moz-selection {
+	background: var(--bs-accent);
+}
+::selection {
+	background: var(--bs-accent);
+}
+
+:focus,
+::selection {
+	box-shadow: none !important;
+	border-color: var(--bs-accent) !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+	width: 0.4em;
+}
+::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	background-color: var(--bs-accent);
+}
+/* ---------- End of General changes ---------- */
+
+/* ---------- Themes ---------- */
 /* Dark Theme */
 [data-bs-theme="dark"] {
 	--bs-body-bg: #030a11 !important;
-	--text-color: #e5f0fa;
-	--primary-color: #001f3d; /* Navy */
-	--secondary-color: #003366; /* Dark Blue */
-	--accent-color: #ffcc00; /* Gold */
+	--accent-color: #ffcc00;
 
 	background-color: var(--bs-body-bg) !important;
-	color: var(--text-color) !important;
 
 	.bg-light,
 	.text-bg-light,
@@ -27,43 +49,22 @@
 	}
 
 	.navbar {
-		background-color: #c9aa2e !important; /* Slightly darkened gold */
-	}
-
-	.card-text,
-	.fs-5 {
-		color: #fdf2f4 !important;
-	}
-
-	.list-group-item a {
-		color: var(--accent-color) !important;
-	}
-
-	.list-group-item a:hover {
-		color: #d81835 !important;
-	}
-
-	::selection {
-		background: #d81835 !important;
+		background-color: #c9aa2e !important;
 	}
 }
 
 /* Light Theme */
 [data-bs-theme="light"] {
 	--bs-body-bg: #f4f4f4 !important;
-	--text-color: #121212;
-	--primary-color: #001f3d; /* Navy */
-	--secondary-color: #003366; /* Dark Blue */
-	--accent-color: #ffcc00; /* Gold */
+	--accent-color: #ffcc00;
 
 	background-color: var(--bs-body-bg) !important;
-	color: var(--text-color) !important;
 
 	.bg-dark,
 	.text-bg-dark,
 	.btn-dark,
 	.btn-outline-dark:hover {
-		background-color: #b39b14 !important; /* Lightened gold for buttons */
+		background-color: #b39b14 !important;
 		border-color: #b39b14 !important;
 	}
 
@@ -72,53 +73,12 @@
 	}
 
 	.navbar {
-		background-color: #f1c783 !important; /* Lighter gold background for navbar */
-	}
-
-	.card-text,
-	.fs-5 {
-		color: #0d0204 !important;
-	}
-
-	.list-group-item a {
-		color: #b39b14 !important; /* Lightened gold for links */
-	}
-
-	.list-group-item a:hover {
-		color: #e72744 !important;
-	}
-
-	::selection {
-		background: #e72744 !important;
+		background-color: #f1c783 !important;
 	}
 }
+/* ---------- End of Themes ---------- */
 
-/* Highlight */
-::-moz-selection {
-	background: var(--bs-accent);
-}
-::selection {
-	background: var(--bs-accent);
-}
-
-/* Scrollbar */
-::-webkit-scrollbar {
-	width: 0.4em;
-}
-
-::-webkit-scrollbar-thumb {
-	border-radius: 5px;
-	background-color: var(--bs-accent);
-}
-
-[data-bs-theme="dark"] {
-	--bs-accent: var(--bs-orange);
-}
-
-[data-bs-theme="light"] {
-	--bs-accent: var(--bs-info);
-}
-
+/* ---------- Bootstrap customise  ---------- */
 /* Hero Image */
 .hero {
 	max-width: 100dvw !important;
@@ -136,7 +96,15 @@
 	filter: brightness(50%);
 }
 
-/* Footer Icons */
+/* Scrollspy */
+.scrollspy {
+	overflow-y: scroll;
+	max-height: 60dvh;
+}
+/* ---------- End of Bootstrap customise  ---------- */
+
+/* ---------- Hover  ---------- */
+/* Bootstrap Icons */
 .bi-twitter-x:hover {
 	fill: black;
 	transition: 0.2s ease-in-out;
@@ -156,8 +124,4 @@
 	fill: yellow;
 	transition: 0.2s ease-in-out;
 }
-
-.scrollspy-example {
-	overflow-y: scroll;
-	max-height: 60dvh;
-}
+/* ---------- End of Hover  ---------- */
